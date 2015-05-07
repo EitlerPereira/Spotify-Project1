@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Spotify Streamer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_hint">Search for an album or artist</string>
+    <string name="title_activity_detail">Media Player</string>
+    <string name="initial_Time">0:0</string>
+    <string name="now_playing_artist_name">Tegan And Sara, The Lonely Island</string>
+    <string name="now_playing_song_name">Everything Is AWESOME!!! (feat. The...</string>
+    <string name="now_playing_album_name">The Lego® Movie: Original Motion...</string>
+
+    <string name="media_control_previous">Prev</string>
+    <string name="media_control_play">Play</string>
+    <string name="media_control_pause">Pause</string>
+    <string name="media_control_next">Next</string>
+    <string name="media_control_max_duration">3:20</string>
+    <string name="media_control_current_time">0:00</string>
+</resources>

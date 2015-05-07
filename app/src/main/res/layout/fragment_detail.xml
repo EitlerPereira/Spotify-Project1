@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textview_artist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/now_playing_artist_name"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textview_album_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/now_playing_album_name"
+        android:layout_below="@id/textview_artist_name"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/imageview_album_art"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:src="@drawable/albumart"
+        android:layout_below="@id/textview_album_name"
+        android:contentDescription="Album art"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/textview_song_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/now_playing_song_name"
+        android:textSize="@dimen/abc_text_size_body_1_material"
+        android:layout_below="@+id/imageview_album_art"
+        android:layout_centerHorizontal="true"/>
+
+    <SeekBar
+        android:id="@+id/seekbar_music_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_song_name"
+        android:max="326"/>
+
+    <TextView
+        android:id="@+id/seekbar_min_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekbar_music_progress"
+        android:layout_alignParentLeft="true"
+        android:text="@string/media_control_current_time"/>
+
+    <TextView
+        android:id="@+id/seekbar_max_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekbar_music_progress"
+        android:layout_alignParentRight="true"
+        android:text="@string/media_control_max_duration"/>
+
+    <ImageButton
+        android:id="@+id/button_play_pause"
+        android:src="@android:drawable/ic_media_play"
+        android:tint="#000"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="@string/media_control_play"
+        android:layout_below="@id/seekbar_music_progress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageButton
+        android:id="@+id/button_previous"
+        android:src="@android:drawable/ic_media_previous"
+        android:tint="#000"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_toLeftOf="@id/button_play_pause"
+        android:layout_toStartOf="@id/button_play_pause"
+        android:layout_alignTop="@id/button_play_pause"
+        android:layout_marginRight="30dp"
+        />
+
+
+    <ImageButton
+        android:id="@+id/button_next"
+        android:src="@android:drawable/ic_media_next"
+        android:tint="#000"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/button_play_pause"
+        android:layout_toRightOf="@id/button_play_pause"
+        android:layout_marginLeft="30dp"
+        />
+
+</RelativeLayout>

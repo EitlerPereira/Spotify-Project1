@@ -101,18 +101,21 @@ public class DetailActivity extends ActionBarActivity {
         private void setUpPlaybackButtons(View view) {
             // Toggle play/pause button state
             final ImageButton playPauseButton = (ImageButton) view.findViewById(R.id.button_play_pause);
-            /*playPauseButton.setOnClickListener(new View.OnClickListener() {
+            playPauseButton.setTag(android.R.drawable.ic_media_play);
+            playPauseButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (playPauseButton.getText().equals(getString(R.string.media_control_play))) {
-                        playPauseButton.setText(getString(R.string.media_control_pause));
+                    if (Integer.parseInt(playPauseButton.getTag().toString()) == android.R.drawable.ic_media_play) {
+                        playPauseButton.setImageDrawable(getResources().getDrawable(android.R.drawable.ic_media_pause));
+                        playPauseButton.setTag(android.R.drawable.ic_media_pause);
                     } else {
-                        playPauseButton.setText(getString(R.string.media_control_play));
+                        playPauseButton.setImageDrawable(getResources().getDrawable(android.R.drawable.ic_media_play));
+                        playPauseButton.setTag(android.R.drawable.ic_media_play);
                     }
                 }
             });
-        }*/
         }
+
 
         /**
          * Given a duration in milliseconds, returns a string in the format %m:%ss
